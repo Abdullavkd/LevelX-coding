@@ -93,5 +93,3 @@ let inp = document.querySelector('h1');
 
 
 
-
-//part 11

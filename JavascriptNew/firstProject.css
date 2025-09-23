@@ -3,7 +3,7 @@
     margin: 0;
 }
 body{
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(to bottom, rgb(255, 0, 89), rgb(255, 0, 132));
 }
 .container{
@@ -18,15 +18,18 @@ body{
 h1{
     color: white;
     margin: 100px 0px 31px 0px;
+    /* transition: slideIn 1.5s ease-in-out; */
+
 }
 input{
     width: 250px;
     border: none;
     border-radius: 7px 0 0 7px;
+    outline: none;
+    padding-left: 13px;
+    box-sizing: border-box;
 }
-input::placeholder{
-    padding-left: 11px;
-}
+
 #add-btn{
     width: 85px;
     height: 41px;
@@ -36,7 +39,7 @@ input::placeholder{
     color: white;
     font-weight: bold;
     font-family: poppins;
-    transition: .5s;
+    transition: .5s ease-in-out;
 }
 #add-btn:hover{
     /* background-color: rgb(2, 0, 117); */
@@ -56,11 +59,67 @@ ul{
 li{
     width: 335px;
     background-color: white;
-    height: 35px;
+    min-height: 35px;
     border-radius: 7px;
     padding: 9px;
     box-sizing: border-box;
     font-family: montserrat;
     margin-bottom: 11px;
-    transition: .3s ease-in-out;
+    animation: slideIn .3s ease-in-out;
+    align-items: center;
+}
+@keyframes slideIn {
+    0%{
+        opacity: 0%;
+        transform: rotateX(60deg) translateX(-100px);
+    }
+    20%{
+        opacity: 40%;
+        transform: rotateX(0deg) translateX(-90px);
+    }
+    40%{
+        opacity: 45%;
+        transform: rotateX(0deg) translateX(-80px);
+    }
+    60%{
+        opacity: 50%;
+        transform: rotateX(0deg) translateX(-70px);
+    }
+    80%{
+        opacity: 60%;
+        transform: rotateX(0deg) translateX(-40px);
+    }
+    100%{
+        opacity: 100%;
+        transform: rotateX(0deg) translateX(0px);
+    }
+}
+.slideOut{
+   animation: slideout .3s ease-in-out; 
+}
+@keyframes slideout{
+    0%{
+        opacity: 100%;
+        transform: rotateX(60deg) translateX(0px);
+    }
+    20%{
+        opacity: 60%;
+        transform: rotateX(0deg) translateX(40px);
+    }
+    40%{
+        opacity: 50%;
+        transform: rotateX(0deg) translateX(70px);
+    }
+    60%{
+        opacity: 45%;
+        transform: rotateX(0deg) translateX(80px);
+    }
+    80%{
+        opacity: 20%;
+        transform: rotateX(0deg) translateX(90px);
+    }
+    100%{
+        opacity: 0%;
+        transform: rotateX(0deg) translateX(100px);
+    }
 }
