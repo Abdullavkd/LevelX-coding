@@ -133,16 +133,22 @@
 // })
 // console.log(mapFunction);
 
-
+// let array = [1,2,5,7,7,8];
+// let arraAssign = array.map((value,index)=>value>4)
+// console.log(arraAssign);
 
 // //Array Method filter()(if didn't set return value, value will be null)
 // let filterFunction = arr.filter((value)=>{
 //     if(value%2==0){
 //         return value
 //     }
-
 // })
 // console.log(filterFunction);
+
+// let array = [1,2,5,7,7,8];
+// let arraAssign = array.filter((value,index)=>value>4)
+// console.log(arraAssign);
+
 
 // // Array Method Reduce()
 // arr = [3,5,7,10];
@@ -158,4 +164,16 @@
 // sum+=data;
 // });
 // console.log(sum);
+
+
+// // Destructuring in Loops and Objects
+// arr = [2,4,7,4,6,55,77,34];
+// console.log(arr[3]);
+// let [z,x,v,g] = arr;
+// console.log();
+
+// obj = {name: "Abdulla", place: "Vennakode", Id: "vkd"}
+// console.log(obj.place);
+// let {name,place,Id} = obj;
+// console.log(place,Id,name);
 
