@@ -322,3 +322,89 @@
 // }
 // console.log(arr.concat(obj));
 
+// // forEach()
+// arr = [3,4,5,6];
+// arr.forEach((item,index,array) => {
+//     console.log(`${index+1}: ${item} from the Array ${array}`);
+// });
+
+// indexOf , lastIndexOf , includes ,find , findIndex , findLastIndex
+// arr = [1,7,3,5,8,3,2,5,6,2,4,3,8,5];
+// console.log(arr.indexOf(3,3));// answer should be the index or -1
+// console.log(arr.includes(3,2));// answer should be true or false
+// console.log(arr.lastIndexOf(3));
+
+// let obj = [
+//     {id: '1',name:"Fathima"},
+//     {id: '2',name:"Shamil"},
+//     {id: '3',name:"Bilal"},
+//     {id: '2',name:"Shamil"},
+//     {id: '3',name:"Bilal"}
+// ]
+// console.log(obj.name);
+// let user = obj.find((item)=>{// find returns only first item
+//     return item.id == 1
+// })
+// console.log(user.name);
+// let users = obj.findIndex(item => item.id == 3);
+// console.log(users);
+
+// let usersNow = obj.findLastIndex(item => item.id == 3);
+// console.log(usersNow);
+
+// console.log(obj.filter(item => item.name =='Bilal'));// fitler will return all item that matches with the condition
+// console.log(obj.find(item => item.name =='Bilal'));// find only return the first item that matches with the condition
+
+
+// // map() - map will return all values in the array // filter only return the true values from the array
+// let arr = ['Country','Coconut','Cucumber','Typography'];
+// console.log(arr.map(items => items.length));
+
+// // sort()
+// let maker = ['Farmer','Founder','Fation','Family'];
+// console.log(maker.sort());
+// let numbers = [7,44,9,52,6,8,52,1,63,0];
+// console.log(numbers.sort());
+
+// let newNumbers = [7,44,9,52,6,8,52,1,63,0];
+// function orderNumber(a,b){  // when using a function like this it will convert to the order of number
+//     if(a > b)return 1;
+//     if(a == b)return 0;
+//     if(a < b)return -1;
+// }
+// console.log(newNumbers.sort(orderNumber));
+
+// let arr = [4,6,45,23,7,33,75,45];
+// arr.sort((a,b)=>{return a-b}) // if the answer negative, it will understand the the a is less than b
+// console.log(arr);
+
+// // reverse
+// let arr = [2,4,6,8];
+// console.log(arr);
+// console.log(arr.reverse());
+
+// // split()
+// let names = 'Faris,Farseen,Furais,Ashmil,Arshad,Abhilash,Adnan,Shamil';
+// let arr = names.split(',')
+// console.log(arr);
+
+// // join()
+// let arr = ['Sulaiman','Ibrahim','Ismayil','Jafar','Aboobackar'];
+// let newArr = arr.join(', ')
+// console.log(newArr);
+
+// // isArray()
+// let arr = [];
+// let obj = {};
+// console.log(Array.isArray(arr));
+// console.log(Array.isArray(obj));
+
+// function camelize(value){
+//     let splitedValue = value.split(' ');
+//     let changed = splitedValue.map((element,index) => {
+//         return index == 0 ? element : element[0].toUpperCase()+element.slice(1);
+        
+//     });
+//     return changed.join(' ')
+// }
+// console.log(camelize('it is a book so i want to bus it for you. are you free now'))
