@@ -408,3 +408,231 @@
 //     return changed.join(' ')
 // }
 // console.log(camelize('it is a book so i want to bus it for you. are you free now'))
+
+// // task - the values between num1 and num2 only will be printed and don't change in the array but, the value should return
+// function filterRange(arr,num1,num2){
+//     return arr.filter(element => {
+//         if(element >= num1 && element <=num2){
+//             return element;
+//         }
+//     })
+// }
+// array = [1,6,3,7,4,55,34,56,78,25,36,96,46,1001]
+// console.log(filterRange(array,3,55));
+
+// // task - the values between a and b only will be printed and don't return the value but , should change in the array
+// function filterRangeInPlace(arr,a,b){
+//     for(let i = 0 ; i < arr.length ; i++){
+//         if(arr[i] < a || arr[i] > b){
+//             arr.splice(i,1)
+//             i--;          
+//         }
+//     }
+//     console.log(arr);
+// }
+// filterRangeInPlace([1,2,3,7,5,6],3,5)
+
+// test
+// let arr = [3,5,37,4,2,9,-4];
+// arr.sort((a,b) => b-a)
+// console.log(arr);
+
+// // test
+// function sortedWithoutChange(arr){
+// return arr.slice().sort()
+// }
+// let arr = ['Html','Css','JavaScript'];
+// console.log(sortedWithoutChange(arr));
+// console.log(arr);
+
+// my Own Test
+// function jamia(){
+//     let common = 3;
+//     this.common = 3;
+// }
+// jamia()
+// console.log(common);
+
+// <--------------------------------------------------->
+// // test - complecated(includes this)
+// function calculator(){
+//     this.methods = {
+//         "+" : (a,b) => a + b,
+//         "-" : (a,b) => a - b
+//     }
+
+//     this.calculateFun = function(values){
+//         let slit = values.split(' ');
+//         a = +slit[0];
+//         op = slit[1];
+//         b = +slit[2];
+
+//         if(!this.methods[op] || isNaN(a) || isNaN(a)){
+//             return "It is NaN";
+//         }
+
+//         return this.methods[op](a,b);
+//     }
+
+//     this.addMethods = function(operator,arrowFunction){
+//         this.methods[operator] = arrowFunction;
+//     }
+
+// }
+// calculator()
+// console.log(calculateFun("84 + 4"));
+// console.log(methods);
+// addMethods("*",(a,b) => a * b);
+// addMethods("/",(a,b) => a / b);
+// addMethods("**",(a,b) => a ** b);
+// console.log(methods);
+
+// console.log(calculateFun("8 * 4"));
+// console.log(calculateFun("8 / 4"));
+// console.log(calculateFun("8 ** 3"));
+
+// <--------------------------------------------------->
+
+// // test
+// let user = [
+//     {name: 'Zakir',age: 23},
+//     {name: 'Fasil',age: 53},
+//     {name: 'Muzammil',age: 34}
+// ];
+// let bit = [];
+// for(let i = 0 ; i < user.length ; i++){
+//     bit[i] = user[i].name;
+// }
+// console.log(bit);
+
+// // test
+// let kabeer = {place: 'Calicut',age: 34};
+// let basheer = {place: 'Malappuram',age: 32};
+// let shumail = {place: 'Kondotty',age: 24};
+
+// let user = [kabeer,basheer,shumail];
+
+// let places = user.map((item)=> item.place);
+// console.log(places);
+
+// // test
+// let kabeer = {name: 'Kabeer',place: 'Calicut',age: 34};
+// let basheer = {name: 'Basheer',place: 'Malappuram',age: 32};
+// let shumail = {name: 'Shumail',place: 'Kondotty',age: 24};
+
+// let names = [kabeer,basheer,shumail];
+// let newArray = names.map((value) => ({
+//     FullName: `${value.name} ${value.place}`,
+//     Age: `${value.age}`
+// }));
+// console.log(newArray);
+
+// // test
+// let kabeer = {name: 'Kabeer',place: 'Calicut',age: 34};
+// let basheer = {name: 'Basheer',place: 'Malappuram',age: 102};
+// let shumail = {name: 'Shumail',place: 'Kondotty',age: 24};
+
+// let names = [kabeer,basheer,shumail];
+// let namesNew = names.sort((a,b) => a.age - b.age)
+// console.log(namesNew);
+
+// // test 
+// let nowOne = [1,2,3,4,5];
+// nowOne.sort(() => Math.random() - 0.5)
+// console.log(nowOne);
+
+// // test
+// let kabeer = {name: 'Kabeer',place: 'Calicut',age: 10};
+// let basheer = {name: 'Basheer',place: 'Malappuram',age: 16};
+// let shumail = {name: 'Shumail',place: 'Kondotty',age: 25};
+// let ijlan = {name: 'Ijlan',place: 'Kannur',age: 43};
+
+// let names = [kabeer,basheer,shumail,ijlan];
+// function getAverageAge(name){
+//     let total = 0;
+//     name.forEach(element => {
+//         total += element.age;
+//     });
+//     return Math.round(total/names.length);
+// }
+// console.log(getAverageAge(names));
+// console.log(Math.round((10+16+25+43)/4));
+
+// // test
+// let arr = ['Usman','Jabir','Jubair','Jabir','Jubair','Sulaiman','Usman','Jubair','Jabir','Jabir','Jabir','Jabir','Iqbal']
+// function unique(array){
+//     let filterArr = [];
+//     let flag = 0;
+//     for(let i = 0; i < array.length ; i++){
+//         for(let j = 1; j<array.length ; j++){
+//             if(array[i] == array[j]){
+//                 flag = 1; 
+//             }
+//         }
+//         for(let k = 0; k < i ; k++){
+//             if(array[i] == array[k]){
+//                 flag = 0;
+//             }
+//         }
+//         if(flag == 1){
+//             filterArr.push(arr[i])
+//         }
+//     }
+//     return filterArr;
+// }
+// console.log(unique(arr));
+
+// // test
+// let arrow = ['Usman','Jabir','Jubair','Jabir','Jubair','Sulaiman','Usman','Jubair','Jabir','Jabir','Jabir','Jabir','Iqbal'];
+// function nowUnique(arr){
+//     let result = [];
+//     for( let i = 0; i<arr.length ; i++){
+//     if(!result.includes(arr[i])){
+//         result.push(arr[i]);       
+//     }
+//     }
+//     return result;
+// }
+// console.log(nowUnique(arrow));
+// console.log("hi");
+
+// // test
+// let arrow = ['Usman','Jabir','Jubair','Jabir','Jubair','Sulaiman','Usman','Jubair','Jabir','Jabir','Jabir','Jabir','Iqbal'];
+// function nowUnique(arr){
+//     let result = [];
+//     for( let i of arr){
+//     if(!result.includes(i)){
+//         result.push(i);       
+//     }
+//     }
+//     return result;
+// }
+// console.log(nowUnique(arrow));
+// console.log("hi");
+
+// // test
+// let users = [
+//   {id: 'john', name: "John Smith", age: 20},
+//   {id: 'ann', name: "Ann Smith", age: 24},
+//   {id: 'pete', name: "Pete Peterson", age: 31},
+// ];
+// function arrById(arr){
+//     return arr.reduce((acc,curr) => {
+//         acc[curr.id] = curr
+//         return acc;
+//     },{})
+// }
+// console.log(arrById(users));
+
+// // test by me
+// let vari = [3,5,2,6];
+// let dom = [
+//     {id: 'one',name: 'kamal'},
+//     {id: 'two',name: 'jamal'},
+//     {id: 'three',name: 'salman'}
+// ]
+// let ji = vari.reduce((acc,curr) => {
+//         acc[curr] = curr;
+//         return acc;
+// },[])
+// console.log(ji);
