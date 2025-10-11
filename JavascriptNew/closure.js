@@ -24,29 +24,87 @@ function calling(){
 let oneDay = [
     {
         odd: "one",
-        even: "Hi Guys..."
+        even: "It is the key of one",
+        click: '1'
     },
     {
         odd: "two",
-        even: "How are You?"
+        even: "It is the key of two",
+        click: '2'
     },
     {
         odd: "three",
-        even: "Are You Fine?"
+        even: "It is the key of three",
+        click: '3'
+    },
+    {
+        odd: "four",
+        even: "It is the key of Four",
+        click: '4'
+    },
+    {
+        odd: "five",
+        even: "It is the key of Five",
+        click: '5'
+    },
+    {
+        odd: "six",
+        even: "It is the key of six",
+        click: '6'
+    },
+    {
+        odd: "seven",
+        even: "It is the key of seven",
+        click: '7'
+    },
+    {
+        odd: "eight",
+        even: "It is the key of eight",
+        click: '8'
+    },
+    {
+        odd: "nine",
+        even: "It is the key of nine",
+        click: '9'
+    },
+    {
+        odd: "zero",
+        even: "It is the key of zero",
+        click: '0'
     }
 ];
 
 function main(){
-    oneDay.forEach((i) => {
+    let divPar = document.createElement("div");
+    document.body.appendChild(divPar);
+    divPar.setAttribute('style','width: auto; display: flex; justify-content: space-between; height: 100px; flex-wrap: wrap')
+
+    oneDay.forEach(function (i,index) {
         let but = document.createElement("button");
         but.innerHTML = i.odd;
         document.body.appendChild(but);
         but.onclick = callBackNow(i.even);
+        divPar.appendChild(but)
+
+        document.addEventListener("keydown",()=> {
+            if(event.key === i.click){
+                let inner = callBackNow(i.even);
+                inner()
+            }
+        })
+
+        but.setAttribute('style','width: 115px; height: 115px; color: white; background-color: orange; border: none; border-radius: 13px; margin: 3px')
     });
 }
+let heading = document.createElement("h1");
+document.body.appendChild(heading);
+heading.setAttribute('style','min-height: 35px')
+
 function callBackNow(now){   
     return function(){
-        alert(now)  
+        // alert(now) 
+        heading.innerHTML = now; 
     }
 };
 main();
+
