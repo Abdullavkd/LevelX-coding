@@ -68,13 +68,13 @@
 // func1();
 // func3();
 
-for(var i=0; i<3 ;i++){
-    setTimeout(()=> console.log(i),1000);
-}
+// for(var i=0; i<3 ;i++){
+//     setTimeout(()=> console.log(i),1000);
+// }
 
-for(let i=0; i<3 ;i++){
-    setTimeout(()=> console.log(i),1000);
-}
+// for(let i=0; i<3 ;i++){
+//     setTimeout(()=> console.log(i),1000);
+// }
 
 
 // function common(a,b,c,d,e,f,g,h,i,j){

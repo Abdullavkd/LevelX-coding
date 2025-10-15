@@ -59,7 +59,7 @@
 //     }
 //     return sum;
 // }
-// console.log(sample(2,4,6,8,10));
+// console.log(sample(2,4,6,8,10,100));
 
 // //Array Method includes
 // arr = [1,4,6,8,5];
@@ -176,4 +176,22 @@
 // console.log(obj.place);
 // let {name,place,Id} = obj;
 // console.log(place,Id,name);
+
+
+
+// // destructuring
+// // Array
+// let arr = [3,46,7,8,4];
+// let [a,b,c,d,e] = arr;
+// console.log(a,b,e);
+
+// // Object
+// let obj = {
+//     name: "salman",
+//     age: 31,
+//     hobby: 'play',
+//     extra: 'skills'
+// }
+// let {age,hobby,name,extra} = obj;
+// console.log(extra);
 

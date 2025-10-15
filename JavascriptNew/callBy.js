@@ -73,5 +73,5 @@ function eight(para){
 seven();
 // parameter in this example is object
 // but still when i changed some chages in that object, main object won't be changed. 
-// because, in this example i created another object on that object, so if we did like it, the old object won't be changed.
-// if we created a new object on an object that is get as parameter, in the main object never happen anything.
+// because, in this example i created another and removed old object, so if we did like it, the old object won't be changed.
+// if we assign a new object on an object that is get as parameter, the old object never stand there and  in the main object never happen anything.
